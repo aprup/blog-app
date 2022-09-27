@@ -5,7 +5,7 @@ module Authors
   
     # POST /elements
     def create
-      @element = @posts.elements.build(element_params)
+      @element = @post.elements.build(element_params)
 
       if @element.save
         notice = nil
@@ -14,11 +14,11 @@ module Authors
       end
       redirect_to edit_post_path(@post), notice: notice
     end
-  
+
     # PATCH/PUT /elements/1
     def update
       @element.update(element_params)
-        redirect_to edit_post_path(@element.post)
+      redirect_to edit_post_path(@element.post)
     end
   
     # DELETE /elements/1
