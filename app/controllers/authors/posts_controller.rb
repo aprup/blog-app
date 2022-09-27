@@ -36,6 +36,7 @@ module Authors
         render :edit
       end
     end
+    
   
     # DELETE /posts/1
     def destroy
